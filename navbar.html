@@ -1,0 +1,32 @@
+<nav class="custom-nav navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" href="index.html">
+      🏠 RoomFinder
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center">
+
+        <li class="nav-item"><a href="room.html" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+
+        <!-- Owner Profile Icon -->
+        <li class="nav-item">
+          <a href="owner.html" class="nav-link owner-icon">
+            <img src="assets/images/male_social.jpg" alt="owner" />
+          </a>
+        </li>
+
+        <li class="nav-item"><a href="login.html" class="nav-link login-btn">Log in</a></li>
+      </ul>
+
+      <form class="d-flex ms-3 search-wrapper" role="search" onsubmit="redirectToSearch(event)">
+        <input id="searchInput" class="form-control search-box" type="search" placeholder="Search location...">
+      </form>
+    </div>
+  </div>
+</nav>

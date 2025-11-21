@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Spacious Room in Kathmandu",
+    "location": "Kalanki, Kathmandu",
+    "contact": "+977-9841234567",
+    "image": "assets/images/room22.jpg",
+    "area": "2 Rooms + Kitchen",
+    "dimension": "12x14 ft",
+    "rent": "12000"
+  },
+  {
+    "id": 2,
+    "title": "Cozy Room in Lalitpur",
+    "location": "Jawalakhel, Lalitpur",
+    "contact": "+977-9812345678",
+    "image": "assets/images/room33.jpg",
+    "area": "1 Room + Attached",
+    "dimension": "10x12 ft",
+    "rent": "9000"
+  },
+  {
+    "id": 3,
+    "title": "Modern Flat in Bhaktapur",
+    "location": "Suryabinayak, Bhaktapur",
+    "contact": "+977-9801234567",
+    "image": "assets/images/room44.jpg",
+    "area": "1BHK Full Flat",
+    "dimension": "20x20 ft",
+    "rent": "15000"
+  }
+]

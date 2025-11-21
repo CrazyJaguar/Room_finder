@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | RoomFinder</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Full Page Layout & Sticky Footer */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, #003b73, #007bff, #00b4d8);
+    }
+
+    main {
+      flex: 1 0 auto;
+      padding-top: 120px; /* fixes navbar overlap */
+      padding-bottom: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    footer {
+      flex-shrink: 0;
+    }
+
+    /* Glass Blur Box */
+    .about-box {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 25px;
+      padding: 40px;
+      max-width: 850px;
+      width: 90%;
+      box-shadow: 0 0 25px rgba(0,0,0,0.3);
+      color: #fff;
+      animation: fadeIn 1.2s ease;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div id="navbar"></div>
+
+<!-- Page Content -->
+<main data-aos="fade-up">
+  <div class="about-box">
+      <h2 class="fw-bold mb-4">About RoomFinder</h2>
+      <p class="lead">
+        RoomFinder is a platform designed to help people in Nepal find affordable rooms,
+        flats, and apartments easily. Our mission is to connect tenants with verified
+        property owners through a smooth and secure online experience.
+      </p>
+      <p>
+        Whether you’re a student, a working professional, or a family, RoomFinder helps
+        you discover your next home with confidence.
+      </p>
+  </div>
+</main>
+
+<!-- Footer -->
+<div id="footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="all_script.js"></script>
+
+<script>
+  AOS.init({ duration: 1000 });
+
+  function redirectToSearch(event) {
+    event.preventDefault();
+    const query = document.getElementById('searchInput').value.trim();
+    if(query) {
+      window.location.href = `search.html?location=${encodeURIComponent(query)}`;
+    }
+  }
+</script>
+
+</body>
+</html>

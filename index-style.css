@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(120deg, #007bff, #00b4d8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    animation: fadeIn 1.2s ease;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.role-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 60px 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    animation: slideUp 1s ease;
+}
+@keyframes slideUp {
+    0% {transform: translateY(50px); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+.role-container h1 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #fff;
+}
+.btn-role {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    background: #fff;
+    color: #007bff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.btn-role:hover {
+    transform: scale(1.1);
+    background: #007bff;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+.fade-out {
+    animation: fadeOut 0.8s forwards;
+}
+@keyframes fadeOut {
+    to {opacity: 0; transform: scale(1.05);}
+}

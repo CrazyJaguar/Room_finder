@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    min-height: 100vh; /* FIXED */
+    background: linear-gradient(120deg, #007bff, #00b4d8);
+    font-family: "Poppins", sans-serif;
+    animation: fadeIn 1.2s ease;
+    padding: 20px 0; /* FIXED: spacing for mobile */
+}
+
+/* Fade animation */
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+.fade-out { animation: fadeOut 0.8s forwards; }
+@keyframes fadeOut { to {opacity: 0; transform: scale(1.05);} }
+
+.form-container {
+    width: 92%;
+    max-width: 650px;
+    margin: 80px auto 40px auto; /* FIXED: prevent cut off */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+/* Text colors */
+.form-container h2,
+.form-container label,
+.form-container p {
+    color: #000;
+}
+
+.form-control,
+.form-select {
+    border-radius: 15px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(6px);
+    color: #000 !important;
+    border: none;
+}
+
+.form-control::placeholder {
+    color: #333;
+}
+
+/* Submit button */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background: #fff;
+    color: #007bff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-submit:hover {
+    background: #007bff;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Back button */
+.back-btn {
+    position: fixed; /* FIXED instead of absolute */
+    top: 20px;
+    left: 20px;
+    z-index: 9999; /* FIXED: no overlap */
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 7px 15px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+}
+.back-btn:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+/* ----------- Mobile Fixes ----------- */
+@media (max-width: 576px) {
+
+    .form-container {
+        padding: 22px;
+        margin-top: 95px; /* MORE space for back button */
+    }
+
+    .back-btn {
+        font-size: 0.95rem;
+        padding: 6px 12px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .btn-submit {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
